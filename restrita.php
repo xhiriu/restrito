@@ -26,6 +26,7 @@ if(isset($_SESSION['erro_log'])and $_SESSION['erro_log'] == 'deslogou'){
 		alert("Deslogado com sucesso!");
 	</script>';
 }
+$_SESSION['erro_log']="";
 ?>
 
 <body>

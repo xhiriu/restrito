@@ -51,40 +51,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3ffffff', e
 
 #btn_limpar{
 	cursor:pointer;
-	border-radius:5px;
+	border-radius:15px;
 	color:#000;
-	width:120px;
-	height:30px;
+	width:155px;
+	height:55px;
 	font-weight:bold;
-	border:1px #FF554F outset;
-background: rgb(255,134,121); /* Old browsers */
-background: -moz-linear-gradient(top, rgba(255,134,121,1) 50%, rgba(255,85,79,1) 51%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(255,134,121,1)), color-stop(51%,rgba(255,85,79,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, rgba(255,134,121,1) 50%,rgba(255,85,79,1) 51%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, rgba(255,134,121,1) 50%,rgba(255,85,79,1) 51%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, rgba(255,134,121,1) 50%,rgba(255,85,79,1) 51%); /* IE10+ */
-background: linear-gradient(to bottom, rgba(255,134,121,1) 50%,rgba(255,85,79,1) 51%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8679', endColorstr='#ff554f',GradientType=0 ); /* IE6-9 */	
+	border:1px #999 outset;
+
+background:url(../imgs/icon/button_canc.png) no-repeat;
 }
 #btn_logar{
 	cursor:pointer;
-	border-radius:5px;
+	border-radius:15px;
 	color:#000;
-	width:120px;
-	height:30px;
+	width:155px;
+	height:55px;
 	font-weight:bold;
-	border:1px #05C592 outset;
-background: rgb(6,244,196); /* Old browsers */
-background: -moz-linear-gradient(top, rgba(6,244,196,1) 50%, rgba(5,197,146,1) 51%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(6,244,196,1)), color-stop(51%,rgba(5,197,146,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, rgba(6,244,196,1) 50%,rgba(5,197,146,1) 51%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, rgba(6,244,196,1) 50%,rgba(5,197,146,1) 51%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, rgba(6,244,196,1) 50%,rgba(5,197,146,1) 51%); /* IE10+ */
-background: linear-gradient(to bottom, rgba(6,244,196,1) 50%,rgba(5,197,146,1) 51%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#06f4c4', endColorstr='#05c592',GradientType=0 ); /* IE6-9 */	
+	border:1px #999 outset;
+
+background:url(../imgs/icon/button_ok.png) no-repeat;
 }
-#btn_logar:hover{border:1px #05C592 inset;}
-#btn_limpar:hover{border:1px #FF554F inset;}
+#btn_logar:hover{border:1px #999 inset;}
+#btn_limpar:hover{border:1px #999 inset;}
 
 .center_align{
 	width:1062px;
@@ -259,6 +247,30 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66aad7d0', e
 
 #tabela_contato{
 	margin:0 auto;
-		
-	
+}
+
+/*=============================  BUTTONS =========================*/
+#btn_add{
+	background:url(../imgs/icon/button_add.png) no-repeat;
+	width:100px;
+	height:34px;
+	border:1px #999 outset;
+	border-radius:5px;
+	cursor:pointer;
+}
+#btn_save{
+	background:url(../imgs/icon/button_save.png) no-repeat;
+	width:100px;
+	height:34px;
+	border:1px #999 outset;
+	border-radius:5px;
+	cursor:pointer;
+}
+#btn_edit{
+	background:url(../imgs/icon/button_edit.png) no-repeat;
+	width:100px;
+	height:34px;
+	border:1px #999 outset;
+	border-radius:5px;
+	cursor:pointer;
 }

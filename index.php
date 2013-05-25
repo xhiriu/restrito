@@ -2,14 +2,10 @@
 
 
 <div id="geral">
-    <div id="conteudo">
-    	
-        <form action="#" method="post">
-        	Login: <input type="text" id="login" name="login" /><br />
-            Senha: <input type="password" id="login" name="login" />
-            <br /><br />
-            <input type="submit" id="btn_logar" />
-        </form>
+    <div id="conteudo" style="text-align:center;">
+    	<br />
+    		<h2>Bem-vindo na área restrito</h2>
+        
 	</div><!--Fim CONTEUDO-->
  
 </div>
