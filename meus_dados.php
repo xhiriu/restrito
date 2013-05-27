@@ -17,7 +17,7 @@ while ($row = mysql_fetch_array($result)) {
     		<h2>Meus Dados</h2>
         <br />
         
-        <form action="" method="post">        
+        <form action="controller/ctr_meus_dados.php" method="post">        
         <table style="margin:0 auto;">
           <tr>
             <td align="right">login: </td>
@@ -40,7 +40,7 @@ while ($row = mysql_fetch_array($result)) {
             </tr>
           <tr>
             <td colspan="2" align="center">
-                <input type="submit" id="btn_save" Value="Salvar"/>
+                <input type="submit" id="btn_save" name="alterar" Value="Alterar"/>
                 <input type="reset" id="btn_edit" Value="Limpar"/>
             </td>
           </tr>

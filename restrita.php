@@ -15,18 +15,21 @@ if(isset($_SESSION['erro_log'])and $_SESSION['erro_log'] == 'erro_logar'){
 	echo '<script type="text/javascript">
 		alert("Login/Senha errado!");
 	</script>';
+$_SESSION['erro_log'] = '';
 }
 if(isset($_SESSION['erro_log'])and $_SESSION['erro_log'] == 'erro_naologado'){
 	echo '<script type="text/javascript">
 		alert("Por favor faça o login!");
 	</script>';
+$_SESSION['erro_log'] = '';
 }
 if(isset($_SESSION['erro_log'])and $_SESSION['erro_log'] == 'deslogou'){
 	echo '<script type="text/javascript">
 		alert("Deslogado com sucesso!");
 	</script>';
+$_SESSION['erro_log'] = '';
 }
-$_SESSION['erro_log']="";
+$_SESSION['erro_log']='';
 ?>
 
 <body>

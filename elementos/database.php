@@ -7,5 +7,4 @@ if (!$conect) die ("<h1>Falha na coneco com o Banco de Dados!</h1>");
 
 // Caso a conexão seja aprovada, então conecta o Banco de Dados.	
 $db = mysql_select_db("restrito_db");
-
 ?>

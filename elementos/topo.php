@@ -1,5 +1,19 @@
 <? 	include 'verifica_sessao.php';
 	include 'database.php';	
+	
+if(isset($_SESSION['msg'])and $_SESSION['msg'] == 'pw_diferente'){
+	echo '<script type="text/javascript">
+		alert("Senhas informadas devem serem iguais para alterar!");
+	</script>';
+$_SESSION['msg'] = '';
+}	
+if(isset($_SESSION['msg'])and $_SESSION['msg'] == 'alt'){
+	echo '<script type="text/javascript">
+		alert("Dados alterados com sucesso!");
+	</script>';
+$_SESSION['msg'] = '';
+}	
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -35,7 +49,7 @@
                     </tr>
                     <tr>
                     	<td><a href="index.php"><div class="button_dados"><img src="imgs/icon/house.png"/> Home</div></a></td>
-						<td><a href="#"><div class="button_dados"><img src="imgs/icon/user.png"/> Meus Dados</div></a></td>
+						<td><a href="meus_dados.php"><div class="button_dados"><img src="imgs/icon/user.png"/> Meus Dados</div></a></td>
 						<td><a href="elementos/sair.php"><div class="button_dados"><img src="imgs/icon/sair.png"/> Sair</div></a></td>
                     </tr>
                 </table>
