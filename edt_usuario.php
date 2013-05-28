@@ -1,6 +1,13 @@
-<? include'elementos/topo.php';
+<?php 
+	include 'elementos/database.php';
 
-$sql= "SELECT * FROM usuario WHERE user_name = '".$_SESSION["login"]."'";
+// pegando parametro da Url para Alterar
+if(isset($_GET['alt_id'])){
+
+
+include'elementos/topo.php';
+
+$sql= "SELECT * FROM usuario WHERE id_user = ".$_GET['alt_id'];
 
 $result = mysql_query($sql) or die(mysql_error());
 while ($row = mysql_fetch_array($result)) {
@@ -32,27 +39,27 @@ while ($row = mysql_fetch_array($result)) {
             <td align="right">Tipo do usuario: </td>
             <td align="left">
             	<select>
+                	
             		<? $txt_select = '';
-						if($_SESSION["id_user"] == 1){
+						if($_SESSION["tp_user"] == 1){
 							echo '<option name="tp_user" value="1">Admin</option>';
 							echo '<option name="tp_user" value="0">Usuário</option>';
 						}else{
 							echo '<option name="tp_user" value="0">Usuário</option>';
 						}
+						
+						for($i = 0 ; $i < 2; $i++){
+							if($i == 1){$txt_select = "Admin";}
+							if($i == 0){$txt_select = "Usuário";}
+						echo '<option name="tp_user" value="'.$i.'">'.$txt_select.'</option>';
+						}
 						?>
             	</select>
             </td>
           </tr>
-    <? }else{
-		echo '<tr>
-            <td align="right">Tipo do usuario: </td>
-            <td align="left">
-				<input type="hidden" value="'.$_SESSION["tp_user"].'" name="tp_user"/>
-              	<select>
-					<option>Usuário</option>
-				</select>
-			</td>
-          	</tr>';
+	<? }else{
+		echo '<input type="hidden" value="'.$tp_user.'" name="tp_user"/>
+              <input type="text" value="Usuário"/>';
 	}?>
           
           
@@ -91,5 +98,57 @@ while ($row = mysql_fetch_array($result)) {
 	</div><!--Fim CONTEUDO-->
  
 </div>
-<? include'elementos/foot.php'?>
+<? include'elementos/foot.php';
+/*
 
+
+
+
+
+
+
+
+
+$_SESSION['msg'] = 'alt';
+header('Location:../usuarios.php') ;
+}
+
+
+$tipo = $_POST['alterar'];
+$login_alt = $_POST['login'];
+$senha_alt = $_POST['senha'];
+$senha_re_alt = $_POST['re-senha'];
+$email_alt = $_POST['email'];
+$tel_alt = $_POST['telefone'];
+$cel_alt = $_POST['celular'];
+$tp_alt = $_POST['tp_user'];
+
+if($senha_alt != $senha_re_alt){
+	$_SESSION['msg'] = 'pw_diferente';
+	header('Location:../meus_dados.php') ;
+	exit;
+}
+
+if(strtolower($tipo) == 'alterar'){
+	$sql = "UPDATE `restrito_db`.`usuario` SET 
+			`user_name` = '".$login_alt."',
+			`tp_user` = '".$tp_alt."',
+			`user_pw` = '".$senha_alt."',
+			`user_email` = '".$email_alt."',
+			 `tel_user` = '".$tel_alt."',
+			 `cel_user` = '".$cel_alt."'
+			WHERE `usuario`.`id_user` = ".$_SESSION["id_user"].";";
+			
+	$result = mysql_query($sql) or die(mysql_error());
+
+
+$_SESSION['login'] = $login_alt;	
+$_SESSION['msg'] = 'alt';
+header('Location:../meus_dados.php') ;
+}
+
+
+
+*/
+}
+?>

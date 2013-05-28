@@ -274,3 +274,32 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66aad7d0', e
 	border-radius:5px;
 	cursor:pointer;
 }
+
+
+
+#tabela_usuarios{
+	width:900px;	
+	border:0px;
+}
+#tabela_usuario_topo{
+	background: linear-gradient(to bottom, #45484D 0%, #000000 100%) repeat scroll 0 0 transparent;
+	color: #FFFFFF;
+    font-weight: bold;
+    height: 30px;
+}
+#tabela_usuario_foot{
+	background: linear-gradient(to bottom, #45484D 0%, #000000 100%) repeat scroll 0 0 transparent;
+	color: #FFFFFF;
+    font-weight: bold;
+    height: 30px;
+}
+.linha_1{
+	background: linear-gradient(to bottom, #FFFFFF 0%, #F1F1F1 50%, #E1E1E1 51%) repeat scroll 0 0 transparent;
+	color:#000;
+	height:30px;	
+}
+.linha_2{
+	background: linear-gradient(to bottom, #FFBC6B 50%, #FF9B3D 51%) repeat scroll 0 0 transparent;
+	color:#000;
+	height:30px;
+}

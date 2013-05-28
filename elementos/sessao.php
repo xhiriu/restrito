@@ -9,6 +9,7 @@ $sql= "SELECT * FROM usuario WHERE user_name = '".$login."'";
 
 $result = mysql_query($sql) or die(mysql_error());
 while ($row = mysql_fetch_array($result)) {
+	$tp_user = $row['tp_user'];
 	$id_user = $row['id_user'];
     $user = $row['user_name'];
     $pw = $row['user_pw'];
@@ -20,6 +21,7 @@ exit;
 }
 $_SESSION["login"] = $user;
 $_SESSION["id_user"] = $id_user;
+$_SESSION["tp_user"] = $tp_user;
 
 header('Location:../index.php') ;
 ?>
