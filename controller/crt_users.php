@@ -1,15 +1,21 @@
 <?php 
 session_start();
 	include '../elementos/database.php';
-	
-// pegando parametro da Url para DELETAR
-if(isset($_GET['del_id'])){
-$sql = "DELETE FROM `restrito_db`.`usuario` WHERE `usuario`.`id_user` = ".$_GET['del_id'];
-			
-$result = mysql_query($sql) or die(mysql_error());
+$tl;
+echo '
+<script type="text/javascript">	
+var i = confirm("Deseja excluir o usuario: '.$_GET["nome_user"].' ?");
+var tl = "";
+if(i == true){
+		window.location.assign("del_user.php?del_id='.$_GET["del_id"].'");
+	}else{
+		location:javascript:history.go(-1);
+	}
+</script>
+';
 
-$_SESSION['msg'] = 'del';
-header('Location:../usuarios.php') ;
-}
-
+//location:javascript:history.go(-1);
 ?>
+<script>
+
+</

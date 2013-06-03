@@ -8,6 +8,7 @@ a{text-decoration:none;}
 	margin:0 auto;
 	width:1062px;	
 }
+
 #conteudo{
 	min-height:500px;
 	border:10px #fff solid;
@@ -277,6 +278,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66aad7d0', e
 
 
 
+#banner_pags{
+	background:url(../imgs/icon/banner_pages.png) no-repeat;
+	font-size:30px;
+	color:#FFF;
+	font-weight:bold;
+	margin:-5px auto 0;
+	height:82px;
+	width:553px;
+	padding-top:10px;
+}
+/*=============================  TABELA USUARIOS =========================*/
+
 #tabela_usuarios{
 	width:900px;	
 	border:0px;
@@ -293,13 +306,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66aad7d0', e
     font-weight: bold;
     height: 30px;
 }
+
+
+
 .linha_1{
-	background: linear-gradient(to bottom, #FFFFFF 0%, #F1F1F1 50%, #E1E1E1 51%) repeat scroll 0 0 transparent;
+	background:#fff;
 	color:#000;
 	height:30px;	
 }
 .linha_2{
-	background: linear-gradient(to bottom, #FFBC6B 50%, #FF9B3D 51%) repeat scroll 0 0 transparent;
-	color:#000;
+	background:#EEE;
+	color:#2F78AC;
 	height:30px;
+}
+
+.linha_1:hover,.linha_2:hover{
+background: linear-gradient(to bottom, #C9E9FE 10%, #9DD7FD 38%) repeat scroll 0 0 transparent;
 }

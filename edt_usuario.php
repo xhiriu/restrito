@@ -4,10 +4,11 @@
 // pegando parametro da Url para Alterar
 if(isset($_GET['alt_id'])){
 
+$id_alt = $_GET['alt_id'];
 
 include'elementos/topo.php';
 
-$sql= "SELECT * FROM usuario WHERE id_user = ".$_GET['alt_id'];
+$sql= "SELECT * FROM usuario WHERE id_user = ".$id_alt;
 
 $result = mysql_query($sql) or die(mysql_error());
 while ($row = mysql_fetch_array($result)) {
@@ -24,10 +25,10 @@ while ($row = mysql_fetch_array($result)) {
 <div id="geral">
     <div id="conteudo" style="text-align:center;">
     	<br />
-    		<h2>Meus Dados</h2>
+    		<h2>Editar usuário: <?=$user?></h2>
         <br />
         
-        <form action="controller/ctr_meus_dados.php" method="post">        
+        <form action="controller/edt_user.php?alt_id=<?=$id_alt?>" method="post">        
         <table style="margin:0 auto;font-weight:bold;">
           <tr>
             <td align="right">login: </td>
@@ -38,39 +39,29 @@ while ($row = mysql_fetch_array($result)) {
           <tr>
             <td align="right">Tipo do usuario: </td>
             <td align="left">
-            	<select>
+            	<select name="tp_user">
                 	
             		<? $txt_select = '';
 						if($_SESSION["tp_user"] == 1){
-							echo '<option name="tp_user" value="1">Admin</option>';
-							echo '<option name="tp_user" value="0">Usuário</option>';
+							$name_tp = "";
+							if($tp_user == 0){$name_tp = "Usuário";}else{$name_tp = "Admin";}
+							
+							echo '<option value="'.$tp_user.'">'.$name_tp.'</option>';
+							echo '<option value="1">Admin</option>';
+							echo '<option value="0">Usuário</option>';
 						}else{
-							echo '<option name="tp_user" value="0">Usuário</option>';
-						}
-						
-						for($i = 0 ; $i < 2; $i++){
-							if($i == 1){$txt_select = "Admin";}
-							if($i == 0){$txt_select = "Usuário";}
-						echo '<option name="tp_user" value="'.$i.'">'.$txt_select.'</option>';
+							echo '<option value="0">Usuário</option>';
 						}
 						?>
             	</select>
             </td>
           </tr>
-	<? }else{
-		echo '<input type="hidden" value="'.$tp_user.'" name="tp_user"/>
-              <input type="text" value="Usuário"/>';
-	}?>
           
           
           <tr>
             <td align="right">Senha: </td>
             <td align="left"><input type="password" id="senha" name="senha" value="<?=$pw?>"/></td>
           </tr>
-          <tr>
-            <td align="right">Repita a Senha: </td>
-            <td align="left"><input type="password" id="re-senha" name="re-senha"/></td>
-          </tr> 
           <tr>
             <td align="right">Email: </td>
             <td align="left"><input type="email" id="email" name="email" value="<?=$emal?>"/></td>
@@ -101,7 +92,7 @@ while ($row = mysql_fetch_array($result)) {
 <? include'elementos/foot.php';
 /*
 
-
+	
 
 
 
@@ -150,5 +141,6 @@ header('Location:../meus_dados.php') ;
 
 
 */
-}
+
+}}
 ?>

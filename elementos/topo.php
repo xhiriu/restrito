@@ -18,6 +18,13 @@ if(isset($_SESSION['msg'])and $_SESSION['msg'] == 'pw_diferente'){
 	</script>';
 $_SESSION['msg'] = '';
 }	
+//====================================== MSG ADD
+if(isset($_SESSION['msg'])and $_SESSION['msg'] == 'add'){
+	echo '<script type="text/javascript">
+		alert("Dado Adicionados com sucesso!");
+	</script>';
+$_SESSION['msg'] = '';
+}
 //====================================== MSG alteracao
 if(isset($_SESSION['msg'])and $_SESSION['msg'] == 'alt'){
 	echo '<script type="text/javascript">
@@ -32,6 +39,16 @@ if(isset($_SESSION['msg'])and $_SESSION['msg'] == 'del'){
 	</script>';
 $_SESSION['msg'] = '';
 }
+//====================================== MSG Campos nulos
+if(isset($_SESSION['msg'])and $_SESSION['msg'] == 'null'){
+	echo '<script type="text/javascript">
+		alert("É Obrigatório ser preenchido o campo login e senha !");
+	</script>';
+$_SESSION['msg'] = '';
+}
+
+
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

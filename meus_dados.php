@@ -31,13 +31,13 @@ while ($row = mysql_fetch_array($result)) {
           <tr>
             <td align="right">Tipo do usuario: </td>
             <td align="left">
-            	<select>
+            	<select name="tp_user">
             		<? $txt_select = '';
 						if($_SESSION["id_user"] == 1){
-							echo '<option name="tp_user" value="1">Admin</option>';
-							echo '<option name="tp_user" value="0">Usuário</option>';
+							echo '<option value="1">Admin</option>';
+							echo '<option value="0">Usuário</option>';
 						}else{
-							echo '<option name="tp_user" value="0">Usuário</option>';
+							echo '<option value="0">Usuário</option>';
 						}
 						?>
             	</select>

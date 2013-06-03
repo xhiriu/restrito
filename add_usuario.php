@@ -16,9 +16,9 @@
           <tr>
             <td align="right">Tipo do usuario: </td>
             <td align="left">
-            	<select>
-						<option name="tp_user_add" value="1">Admin</option>
-						<option name="tp_user_add" value="0">Usuário</option>
+            	<select name="tp_user_add" >
+						<option value="1">Admin</option>
+						<option value="0">Usuário</option>
 						
             	</select>
             </td>
@@ -30,7 +30,7 @@
           </tr>
           <tr>
             <td align="right">Repita a Senha: </td>
-            <td align="left"><input type="password" id="re-senha" name="re-senha"/></td>
+            <td align="left"><input type="password" id="re_senha" name="re_senha"/></td>
           </tr> 
           <tr>
             <td align="right">Email: </td>
